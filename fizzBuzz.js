@@ -2,14 +2,15 @@ const fizzBuzz = () => {
     let fizz = 3;
     let buzz = 5;
     let max = 100;
+    let output = [];
 
-    for(let i = 0; i <= max; i++) {
+    for(let i = 1; i <= max; i++) {
         const isFizz = i % fizz === 0;
         const isBuzz = i % buzz === 0;
 
-        let output = isFizz && isBuzz ? "FizzBuzz" : isFizz ? "Fizz" : isBuzz ? "Buzz" : i;
-        console.log(output);
+        output.push(isFizz && isBuzz ? "FizzBuzz" : isFizz ? "Fizz" : isBuzz ? "Buzz" : i);
     }
+    return output;
 }
 
-fizzBuzz();
+module.exports = fizzBuzz;
